@@ -4,7 +4,6 @@ RUN apk update && apk add --no-cache git
 WORKDIR /app
 COPY . .
 
-RUN go mod tidy && go mod download
 RUN go build -v -o fc-go-challenge .
 
 FROM scratch
